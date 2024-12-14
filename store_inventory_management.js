@@ -38,6 +38,9 @@ class Store {
     constructor() {
         this.inventory = [];
     }
+    addProduct(product) {
+        this.inventory.push(product);
+    }
 }
 
 // Create perishable product products:

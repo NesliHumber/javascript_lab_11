@@ -68,20 +68,28 @@ store.addProduct(milk);
 store.addProduct(bread);
 store.addProduct(cheese);
 
-// Print total inventory value before 15% discount:
-console.log("Total Inventory Value before discount: $" + store.getInventoryValue().toFixed(2));
-
-// Apply a 15% discount:
-ProductProperties.applyDiscount(store.inventory, 0.15);
-
-// Print total inventory value after 15% discount:
-console.log("Total Inventory Value after applying a 15% discount: $" + store.getInventoryValue().toFixed(2));
-
-// Find and print details of a specific product by name:
-const productToFind = 'Milk';
-const foundProduct = store.findProductByName(productToFind);
-if (foundProduct) {
-    console.log("Found Product:", foundProduct.toString());
-} else {
-    console.log(`Product "${productToFind}" not found.`);
+// Function to log output to the page:
+function log(message) {
+    const output = document.getElementById('output');
+    output.textContent += message + '\n';
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Print total inventory value before 15% discount:
+    log("Total Inventory Value before discount: $" + store.getInventoryValue().toFixed(2));
+
+    // Apply a 15% discount:
+    ProductProperties.applyDiscount(store.inventory, 0.15);
+
+    // Print total inventory value after 15% discount:
+    log("Total Inventory Value after applying a 15% discount: $" + store.getInventoryValue().toFixed(2));
+
+    // Find and print details of a specific product by name:
+    const productToFind = 'Milk';
+    const foundProduct = store.findProductByName(productToFind);
+    if (foundProduct) {
+        log("Found Product: " + foundProduct.toString());
+    } else {
+        log(`Product "${productToFind}" not found.`);
+    }
+});

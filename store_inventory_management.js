@@ -80,3 +80,8 @@ console.log("Total Inventory Value after applying a 15% discount: $" + store.get
 // Find and print details of a specific product by name:
 const productToFind = 'Milk';
 const foundProduct = store.findProductByName(productToFind);
+if (foundProduct) {
+    console.log("Found Product:", foundProduct.toString());
+} else {
+    console.log(`Product "${productToFind}" not found.`);
+}

@@ -67,3 +67,6 @@ store.addProduct(orange);
 store.addProduct(milk);
 store.addProduct(bread);
 store.addProduct(cheese);
+
+// Print total inventory value before 15% discount:
+console.log("Total Inventory Value before discount: $" + store.getInventoryValue().toFixed(2));

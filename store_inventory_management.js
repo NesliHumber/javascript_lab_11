@@ -50,6 +50,7 @@ class Store {
 }
 
 // Part 5: Testing the System
+const store = new Store();
 
 // Create products:
 const apple = new ProductProperties('Apple', 2.50, 50);
@@ -59,3 +60,10 @@ const cheese = new ProductProperties('Cheese', 5.00, 15);
 // Create perishable product products:
 const milk = new PerishableProductProperties('Milk', 1.50, 10, '2024-12-31');
 const bread = new PerishableProductProperties('Bread', 2.00, 20, '2025-01-15');
+
+// Add products to the store:
+store.addProduct(apple);
+store.addProduct(orange);
+store.addProduct(milk);
+store.addProduct(bread);
+store.addProduct(cheese);

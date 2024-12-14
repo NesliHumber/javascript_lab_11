@@ -33,6 +33,13 @@ class PerishableProductProperties extends ProductProperties {
 
 }
 
+// Part 4: Store Management
+class Store {
+    constructor() {
+        this.inventory = [];
+    }
+}
+
 // Create perishable product products:
 const milk = new PerishableProductProperties('Milk', 1.50, 10, '2024-12-31');
 const bread = new PerishableProductProperties('Bread', 2.00, 20, '2025-01-15');

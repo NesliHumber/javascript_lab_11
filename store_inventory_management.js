@@ -49,6 +49,13 @@ class Store {
     }
 }
 
+// Part 5: Testing the System
+
+// Create products:
+const apple = new ProductProperties('Apple', 2.50, 50);
+const orange = new ProductProperties('Orange', 1.75, 30);
+const cheese = new ProductProperties('Cheese', 5.00, 15);
+
 // Create perishable product products:
 const milk = new PerishableProductProperties('Milk', 1.50, 10, '2024-12-31');
 const bread = new PerishableProductProperties('Bread', 2.00, 20, '2025-01-15');
